@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1537015795 source:c:\cpp\cpp_learn\halak\main.cpp
+	<iostream>
+	<vector>
+	<tuple>
+	<algorithm>
+
