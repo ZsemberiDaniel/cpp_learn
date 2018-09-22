@@ -1,0 +1,3 @@
+"C:\Program Files\JetBrains\CLion 2018.2.3\bin\cmake\win\bin\cmake.exe" -E remove -f CMakeFiles\allatkert.dir/objects.a
+C:\PROGRA~2\CODEBL~1\MinGW\bin\ar.exe cr CMakeFiles\allatkert.dir/objects.a @CMakeFiles\allatkert.dir\objects1.rsp
+C:\PROGRA~2\CODEBL~1\MinGW\bin\G__~1.EXE -g   -Wl,--whole-archive CMakeFiles\allatkert.dir/objects.a -Wl,--no-whole-archive  -o allatkert.exe -Wl,--out-implib,liballatkert.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\allatkert.dir\linklibs.rsp
