@@ -1,0 +1,3 @@
+"C:\Program Files\JetBrains\CLion 2018.2.3\bin\cmake\win\bin\cmake.exe" -E remove -f CMakeFiles\elso.dir/objects.a
+C:\PROGRA~2\CODEBL~1\MinGW\bin\ar.exe cr CMakeFiles\elso.dir/objects.a @CMakeFiles\elso.dir\objects1.rsp
+C:\PROGRA~2\CODEBL~1\MinGW\bin\G__~1.EXE -g   -Wl,--whole-archive CMakeFiles\elso.dir/objects.a -Wl,--no-whole-archive  -o elso.exe -Wl,--out-implib,libelso.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\elso.dir\linklibs.rsp

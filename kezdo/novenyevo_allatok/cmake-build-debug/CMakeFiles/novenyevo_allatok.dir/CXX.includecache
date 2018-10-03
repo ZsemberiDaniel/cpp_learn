@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/cpp/cpp_learn/kezdo/novenyevo_allatok/main.cpp
+iostream
+-
+string
+-
+unordered_map
+-
+vector
+-
+

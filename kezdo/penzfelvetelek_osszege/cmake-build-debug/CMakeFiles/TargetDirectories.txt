@@ -1,0 +1,3 @@
+C:/cpp/cpp_learn/kezdo/penzfelvetelek_osszege/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/cpp/cpp_learn/kezdo/penzfelvetelek_osszege/cmake-build-debug/CMakeFiles/penzfelvetelek_osszege.dir
+C:/cpp/cpp_learn/kezdo/penzfelvetelek_osszege/cmake-build-debug/CMakeFiles/rebuild_cache.dir
