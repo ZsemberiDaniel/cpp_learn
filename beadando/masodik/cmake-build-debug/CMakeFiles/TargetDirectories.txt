@@ -1,0 +1,3 @@
+C:/cpp/cpp_learn/beadando/masodik/cmake-build-debug/CMakeFiles/masodik.dir
+C:/cpp/cpp_learn/beadando/masodik/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/cpp/cpp_learn/beadando/masodik/cmake-build-debug/CMakeFiles/rebuild_cache.dir
