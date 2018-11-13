@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/appy.dir/main.cpp.o  -o appy 

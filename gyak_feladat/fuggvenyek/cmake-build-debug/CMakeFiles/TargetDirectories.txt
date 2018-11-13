@@ -1,0 +1,3 @@
+/home/zsdaniel/Code/source/cpp_learn/gyak_feladat/fuggvenyek/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/zsdaniel/Code/source/cpp_learn/gyak_feladat/fuggvenyek/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/zsdaniel/Code/source/cpp_learn/gyak_feladat/fuggvenyek/cmake-build-debug/CMakeFiles/fuggvenyek.dir

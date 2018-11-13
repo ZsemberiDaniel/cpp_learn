@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/szigetek.dir/twentyfour.cpp.o  -o szigetek 

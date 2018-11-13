@@ -1,0 +1,3 @@
+/home/zsdaniel/Code/source/cpp_learn/oct18a/appy/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/zsdaniel/Code/source/cpp_learn/oct18a/appy/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/zsdaniel/Code/source/cpp_learn/oct18a/appy/cmake-build-debug/CMakeFiles/appy.dir

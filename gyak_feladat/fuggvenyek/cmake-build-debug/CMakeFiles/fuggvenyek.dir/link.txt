@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/fuggvenyek.dir/main.cpp.o  -o fuggvenyek 

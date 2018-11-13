@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/emberek.dir/main.cpp.o  -o emberek 
