@@ -9,15 +9,9 @@ typedef std::vector<int> OutputDays;
 
 // function definitions
 void input(int *N, int *M, Temperatures *H);
-void solve(const int N, const int M, const Temperatures H, int *K, OutputDays *T);
-bool GoodDay(int N, Temperatures H, int day);
+void solve(const int N, const int M, Temperatures *H, int *K, OutputDays *T);
+bool GoodDay(const int N, Temperatures *H, const int day);
 void output(int K, std::vector<int> T);
-
-// variables
-std::string title = "Sok telepulesen meleg napok";
-std::string cityCountError = "A telepulesek szamanak egesz szamnak kell lennie es benne kell lennie az [1;1000] intervallumban.";
-std::string dayCountError = "A napok szamanak egesz szamnak kell lennie es benne kell lennie az [1;1000] intervallumban.";
-std::string temperatureError = "A homersekletnek -50 es 50 koze eso szamnak kell lennie!";
 
 // input
 int N, M;
@@ -29,9 +23,8 @@ OutputDays T;
 
 int main() {
     std::ios_base::sync_with_stdio(false);
-    std::clog << title << std::endl << std::endl;
     input(&N, &M, &H);
-    solve(N, M, H, &K, &T);
+    solve(N, M, &H, &K, &T);
     output(K, T);
 
     return 0;
@@ -47,22 +40,8 @@ void input(int *N, int *M, Temperatures *H) {
     // reading city count
     std::cin >> *N;
 
-    while (std::cin.fail() || *N < 0 || *N > 1000) {
-        std::cin.clear();
-        std::cin.ignore();
-        std::clog << cityCountError << std::endl;
-        std::cin >> *N;
-    }
-
     // reading day count
     std::cin >> *M;
-
-    while (std::cin.fail() || *M < 0 || *M > 1000) {
-        std::cin.clear();
-        std::cin.ignore();
-        std::clog << dayCountError << std::endl;
-        std::cin >> *M;
-    }
 
     // creating vector for the temperatures
     *H = std::vector< std::vector<float> >(*N, std::vector<float>(*M));
@@ -71,13 +50,6 @@ void input(int *N, int *M, Temperatures *H) {
     for (int i = 0; i < *N; i++) {
         for (int k = 0; k < *M; k++) {
             std::cin >> H->at(i).at(k);
-
-            while (std::cin.fail() || H->at(i).at(k) < -50 || H->at(i).at(k) > 50) {
-                std::cin.clear();
-                std::cin.ignore();
-                std::clog << temperatureError << std::endl;
-                std::cin >> H->at(i).at(k);
-            }
         }
     }
 }
@@ -90,7 +62,7 @@ void input(int *N, int *M, Temperatures *H) {
  * @param K Output. How many days meet the criteria.
  * @param T Output. Which days meet the criteria
  */
-void solve(const int N, const int M, const Temperatures H, int *K, OutputDays *T) {
+void solve(const int N, const int M, Temperatures *H, int *K, OutputDays *T) {
     // counting how many days meet the given criteria and storing the output
     *K = 0;
     *T = std::vector<int>();
@@ -110,14 +82,14 @@ void solve(const int N, const int M, const Temperatures H, int *K, OutputDays *T
  * @param day On which day we want to check the criteria.
  * @return Returns whether at least half the cities meet the criteria.
  */
-bool GoodDay(int N, Temperatures H, int day) {
+bool GoodDay(const int N, Temperatures *H, const int day) {
     // count how many cities are above 30 in temperature on the given day
     int counter = 0;
     // how many cities are needed to be over 30 for this day to meet the criteria
     int needed = (int) ceil(N / 2.0);
 
     for (int i = 0; i < N && counter < needed; i++) {
-        counter += H[i][day] >= 30;
+        counter += H->at(i).at(day) >= 30;
     }
 
     return counter >= needed;
