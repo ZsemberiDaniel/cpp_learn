@@ -9,7 +9,7 @@ typedef std::vector<int> OutputDays;
 
 // function definitions
 void input(int *N, int *M, Temperatures *H);
-void solve(const int N, const int M, Temperatures *H, int *K, OutputDays *T);
+void solve(int N, int M, Temperatures *H, int *K, OutputDays *T);
 bool GoodDay(const int N, Temperatures *H, const int day);
 void output(int K, std::vector<int> T);
 

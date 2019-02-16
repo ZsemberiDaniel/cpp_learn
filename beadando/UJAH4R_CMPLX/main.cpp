@@ -1,4 +1,5 @@
 #include <iostream>
+#include <cstdio>
 #include <cmath>
 #include <vector>
 #include <string>
@@ -8,16 +9,20 @@ typedef std::vector<std::vector<float>> Temperatures;
 typedef std::vector<int> OutputDays;
 
 // function definitions
-void input(const int *N, const int *M, Temperatures *H);
-void solve(const int N, const int M, Temperatures *H, int *K, OutputDays *T);
+void input(int *N, int *M, Temperatures *H);
+void solve(int N, int M, Temperatures *H, int *K, OutputDays *T);
 bool GoodDay(int N, Temperatures *H, int day);
 void output(int K, std::vector<int> T);
 
 // variables
-std::string title = "Sok telepulesen meleg napok";
-std::string cityCountError = "A telepulesek szamanak egesz szamnak kell lennie es benne kell lennie az [1;1000] intervallumban.";
-std::string dayCountError = "A napok szamanak egesz szamnak kell lennie es benne kell lennie az [1;1000] intervallumban.";
-std::string temperatureError = "A homersekletnek -50 es 50 koze eso szamnak kell lennie!";
+const std::string title = "Sok telepulesen meleg napok";
+const std::string cityCountInputText = "Varosok szama: ";
+const std::string cityCountError = "A telepulesek szamanak egesz szamnak kell lennie es benne kell lennie az [1;1000] intervallumban.";
+const std::string dayCountInputText = "Napok szama: ";
+const std::string dayCountError = "A napok szamanak egesz szamnak kell lennie es benne kell lennie az [1;1000] intervallumban.";
+const std::string temperatureInputText = "A(z) %d. telepulesen, a(z) %d. napon: ";
+const std::string temperatureError = "A homersekletnek -50 es 50 koze eso szamnak kell lennie!";
+const std::string outputText = "%d darab ilyen nap van:\n";
 
 // input
 int N, M;
@@ -41,27 +46,56 @@ int main() {
  * Reads the input for the exercise
  * @param N How many cities there are will be stored here.
  * @param M How many days there are will be stored here.
- * @param H All the temeperatures will be stored here in a vector.
+ * @param H All the temperatures will be stored here in a vector.
  */
-void input(const int *N,const  int *M, Temperatures *H) {
-    // reading city count
-    std::cin >> *N;
+void input(int *N, int *M, Temperatures *H) {
+    std::string line;
+    bool good_input = true;
 
-    while (std::cin.fail() || *N < 0 || *N > 1000) {
-        std::cin.clear();
-        std::cin.ignore();
+    // reading city count
+    std::printf(cityCountInputText.c_str());
+    std::getline(std::cin, line);
+    try {
+        *N = std::stoi(line);
+    } catch (const std::invalid_argument&) {
+        good_input = false;
+    }
+
+    while (!good_input || line.find('.') != std::string::npos || *N < 0 || *N > 1000) {
         std::clog << cityCountError << std::endl;
-        std::cin >> *N;
+        std::printf(cityCountInputText.c_str());
+
+        good_input = true;
+        std::getline(std::cin, line);
+        try {
+            *N = std::stoi(line);
+        } catch (const std::invalid_argument&) {
+            good_input = false;
+        }
     }
 
     // reading day count
-    std::cin >> *M;
+    std::printf(dayCountInputText.c_str());
 
-    while (std::cin.fail() || *M < 0 || *M > 1000) {
-        std::cin.clear();
-        std::cin.ignore();
+    good_input = true;
+    std::getline(std::cin, line);
+    try {
+        *M = std::stoi(line);
+    } catch (const std::invalid_argument&) {
+        good_input = false;
+    }
+
+    while (!good_input || line.find('.') != std::string::npos || *M < 0 || *M > 1000) {
         std::clog << dayCountError << std::endl;
-        std::cin >> *M;
+        std::printf(dayCountInputText.c_str());
+
+        good_input = true;
+        std::getline(std::cin, line);
+        try {
+            *M = std::stoi(line);
+        } catch (const std::invalid_argument&) {
+            good_input = false;
+        }
     }
 
     // creating vector for the temperatures
@@ -70,13 +104,27 @@ void input(const int *N,const  int *M, Temperatures *H) {
     // reading temperatures
     for (int i = 0; i < *N; i++) {
         for (int k = 0; k < *M; k++) {
-            std::cin >> H->at(i).at(k);
+            std::printf(temperatureInputText.c_str(), i + 1, k + 1);
 
-            while (std::cin.fail() || H->at(i).at(k) < -50 || H->at(i).at(k) > 50) {
-                std::cin.clear();
-                std::cin.ignore();
+            good_input = true;
+            std::getline(std::cin, line);
+            try {
+                H->at(i).at(k) = std::stoi(line);
+            } catch (const std::invalid_argument&) {
+                good_input = false;
+            }
+
+            while (!good_input || H->at(i).at(k) < -50 || H->at(i).at(k) > 50) {
                 std::clog << temperatureError << std::endl;
-                std::cin >> H->at(i).at(k);
+                std::printf(temperatureInputText.c_str(), i + 1, k + 1);
+
+                good_input = true;
+                std::getline(std::cin, line);
+                try {
+                    H->at(i).at(k) = std::stoi(line);
+                } catch (const std::invalid_argument&) {
+                    good_input = false;
+                }
             }
         }
     }
@@ -129,9 +177,9 @@ bool GoodDay(int N, Temperatures *H, int day) {
  * @param T Which days met the criteria.
  */
 void output(int K, std::vector<int> T) {
-    std::cout << K;
+    std::printf(outputText.c_str(), K);
 
-    for (int i = 0; i < T.size(); i++) {
-        std::cout << " " << T[i];
+    for (int i : T) {
+        std::cout << " " << i << ".nap" << std::endl;
     }
 }
