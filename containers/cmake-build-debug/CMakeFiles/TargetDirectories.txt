@@ -1,0 +1,3 @@
+/home/zsdaniel/Code/source/cpp_learn/containers/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/zsdaniel/Code/source/cpp_learn/containers/cmake-build-debug/CMakeFiles/containers.dir
+/home/zsdaniel/Code/source/cpp_learn/containers/cmake-build-debug/CMakeFiles/edit_cache.dir

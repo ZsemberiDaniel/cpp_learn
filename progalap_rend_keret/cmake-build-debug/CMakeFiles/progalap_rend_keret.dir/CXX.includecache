@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/zsdaniel/Code/source/cpp_learn/progalap_rend_keret/Sorting.cpp
+vector
+-
+stdlib.h
+-
+random
+-
+cstdio
+-
+iostream
+-
+

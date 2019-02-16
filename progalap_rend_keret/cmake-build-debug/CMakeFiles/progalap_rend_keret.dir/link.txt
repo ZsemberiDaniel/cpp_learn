@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/progalap_rend_keret.dir/Sorting.cpp.o  -o progalap_rend_keret 

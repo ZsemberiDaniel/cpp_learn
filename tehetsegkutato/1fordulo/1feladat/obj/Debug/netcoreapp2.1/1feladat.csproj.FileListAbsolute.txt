@@ -1,0 +1,11 @@
+/home/zsdaniel/Code/source/tehetsegkutato/1fordulo/1feladat/bin/Debug/netcoreapp2.1/1feladat.deps.json
+/home/zsdaniel/Code/source/tehetsegkutato/1fordulo/1feladat/bin/Debug/netcoreapp2.1/1feladat.runtimeconfig.json
+/home/zsdaniel/Code/source/tehetsegkutato/1fordulo/1feladat/bin/Debug/netcoreapp2.1/1feladat.runtimeconfig.dev.json
+/home/zsdaniel/Code/source/tehetsegkutato/1fordulo/1feladat/bin/Debug/netcoreapp2.1/1feladat.dll
+/home/zsdaniel/Code/source/tehetsegkutato/1fordulo/1feladat/bin/Debug/netcoreapp2.1/1feladat.pdb
+/home/zsdaniel/Code/source/tehetsegkutato/1fordulo/1feladat/obj/Debug/netcoreapp2.1/1feladat.csprojAssemblyReference.cache
+/home/zsdaniel/Code/source/tehetsegkutato/1fordulo/1feladat/obj/Debug/netcoreapp2.1/1feladat.csproj.CoreCompileInputs.cache
+/home/zsdaniel/Code/source/tehetsegkutato/1fordulo/1feladat/obj/Debug/netcoreapp2.1/1feladat.AssemblyInfoInputs.cache
+/home/zsdaniel/Code/source/tehetsegkutato/1fordulo/1feladat/obj/Debug/netcoreapp2.1/1feladat.AssemblyInfo.cs
+/home/zsdaniel/Code/source/tehetsegkutato/1fordulo/1feladat/obj/Debug/netcoreapp2.1/1feladat.dll
+/home/zsdaniel/Code/source/tehetsegkutato/1fordulo/1feladat/obj/Debug/netcoreapp2.1/1feladat.pdb

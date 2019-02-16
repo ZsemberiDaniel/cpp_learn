@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/feladat4.dir/main.cpp.o  -o feladat4 

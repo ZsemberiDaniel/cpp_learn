@@ -1,0 +1,3 @@
+/home/zsdaniel/Code/source/tehetsegkutato/2fordulo/feladat3/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/zsdaniel/Code/source/tehetsegkutato/2fordulo/feladat3/cmake-build-debug/CMakeFiles/feladat3.dir
+/home/zsdaniel/Code/source/tehetsegkutato/2fordulo/feladat3/cmake-build-debug/CMakeFiles/edit_cache.dir

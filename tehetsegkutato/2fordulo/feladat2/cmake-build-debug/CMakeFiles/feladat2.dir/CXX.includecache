@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/zsdaniel/Code/source/tehetsegkutato/2fordulo/feladat2/main.cpp
+iostream
+-
+vector
+-
+algorithm
+-
+

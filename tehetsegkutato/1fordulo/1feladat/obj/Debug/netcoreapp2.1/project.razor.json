@@ -1,0 +1,14 @@
+{
+  "ProjectFilePath": "/home/zsdaniel/Code/source/tehetsegkutato/1fordulo/1feladat/1feladat.csproj",
+  "TargetFramework": "netcoreapp2.1",
+  "TagHelpers": [],
+  "Configuration": {
+    "ConfigurationName": "UnsupportedRazor",
+    "LanguageVersion": "1.0",
+    "Extensions": [
+      {
+        "ExtensionName": "UnsupportedRazorExtension"
+      }
+    ]
+  }
+}

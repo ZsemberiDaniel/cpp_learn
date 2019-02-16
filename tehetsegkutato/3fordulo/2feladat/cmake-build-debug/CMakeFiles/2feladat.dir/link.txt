@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/2feladat.dir/main.cpp.o  -o 2feladat 
